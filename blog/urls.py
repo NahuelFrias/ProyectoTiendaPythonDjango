@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.blog, name="Blog"),
+    path('categoria/<int:categoria_id>/', views.categoria, name="categoria" ) # paso por parametro en la url el id de la categoria
 ]
