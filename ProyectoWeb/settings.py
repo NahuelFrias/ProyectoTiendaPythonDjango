@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'servicios',
     'blog',
     'contacto',
+    'tienda',
+    'carro',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +136,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# configuracion de email
+
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com" # host del correo electronico, este es de gmail
+EMAIL_USE_TLS=True # requiere autenticacion
+EMAIL_PORT=587
+EMAIL_HOST_USER="prueba@gmail.com"
+EMAIL_HOST_PASSWORD="prueba123"
